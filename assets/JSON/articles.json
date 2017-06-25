@@ -1,0 +1,44 @@
+{
+    "1": {
+        "Title": "A Funny Thing 1",
+        "Description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum veniam qui eos aspernatur, quos perspiciatis assumenda? Qui, quae ipsam dolorum voluptas excepturi magnam reprehenderit illum dolorem recusandae libero minus quos, expedita veritatis numquam vero corporis voluptatibus possimus, asperiores deleniti tempore.",
+        "datePublished": "12-01-2016",
+        "articleImage": "../assets/articleImages/1.jpg",
+        "publishedBy": "Dotun Longe"
+    },
+    "2": {
+        "Title": "A Funny Thing 2",
+        "Description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum veniam qui eos aspernatur, quos perspiciatis assumenda? Qui, quae ipsam dolorum voluptas excepturi magnam reprehenderit illum dolorem recusandae libero minus quos, expedita veritatis numquam vero corporis voluptatibus possimus, asperiores deleniti tempore.",
+        "datePublished": "12-01-2016",
+        "articleImage": "../assets/articleImages/2.jpg",
+        "publishedBy": "Dotun Longe"
+    },
+    "3": {
+        "Title": "A Funny Thing 3",
+        "Description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum veniam qui eos aspernatur, quos perspiciatis assumenda? Qui, quae ipsam dolorum voluptas excepturi magnam reprehenderit illum dolorem recusandae libero minus quos, expedita veritatis numquam vero corporis voluptatibus possimus, asperiores deleniti tempore.",
+        "datePublished": "12-01-2016",
+        "articleImage": "../assets/articleImages/3.jpg",
+        "publishedBy": "Dotun Longe"
+    },
+    "4": {
+        "Title": "A Funny Thing 4",
+        "Description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum veniam qui eos aspernatur, quos perspiciatis assumenda? Qui, quae ipsam dolorum voluptas excepturi magnam reprehenderit illum dolorem recusandae libero minus quos, expedita veritatis numquam vero corporis voluptatibus possimus, asperiores deleniti tempore.",
+        "datePublished": "12-01-2016",
+        "articleImage": "../assets/articleImages/4.jpg",
+        "publishedBy": "Dotun Longe"
+    },
+    "5": {
+        "Title": "A Funny Thing 5",
+        "Description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum veniam qui eos aspernatur, quos perspiciatis assumenda? Qui, quae ipsam dolorum voluptas excepturi magnam reprehenderit illum dolorem recusandae libero minus quos, expedita veritatis numquam vero corporis voluptatibus possimus, asperiores deleniti tempore.",
+        "datePublished": "12-01-2016",
+        "articleImage": "../assets/articleImages/5.jpg",
+        "publishedBy": "Dotun Longe"
+    },
+    "6": {
+        "Title": "A Funny Thing 6",
+        "Description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum veniam qui eos aspernatur, quos perspiciatis assumenda? Qui, quae ipsam dolorum voluptas excepturi magnam reprehenderit illum dolorem recusandae libero minus quos, expedita veritatis numquam vero corporis voluptatibus possimus, asperiores deleniti tempore.",
+        "datePublished": "12-01-2016",
+        "articleImage": "../assets/articleImages/6.jpg",
+        "publishedBy": "Dotun Longe"
+    }
+}
