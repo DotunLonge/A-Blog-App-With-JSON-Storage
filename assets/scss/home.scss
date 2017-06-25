@@ -1,0 +1,45 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.navBar {
+    background: pink;
+    color: white;
+    height: 80px;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    .newPostButton {
+        position: absolute;
+        margin: auto;
+        border: 2px solid white;
+        color: white;
+        top: 0%;
+        bottom: 0%;
+        left: 0%;
+        right: 0%;
+        width: 8rem;
+        height: 3rem;
+        background: transparent;
+        transition: 300ms;
+        &:focus,
+        &:active {
+            outline: none;
+        }
+        &:hover {
+            transition: 300ms;
+            width: 8.15rem;
+            height: 3.15rem;
+            background: white;
+            color: pink;
+        }
+    }
+}
+
+.hide {
+    display: none
+}
