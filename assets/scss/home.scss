@@ -43,3 +43,16 @@ body {
 .hide {
     display: none
 }
+
+.holder {
+    overflow: auto;
+    margin: auto;
+}
+
+.insideThing {
+    width: 80%;
+    height: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
