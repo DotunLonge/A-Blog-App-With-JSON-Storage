@@ -1,27 +1,63 @@
+$right: 20px;
 html,
 body {
     margin: 0;
     padding: 0;
     height: 100%;
     width: 100%;
+    * {
+        font-family: 'Raleway', sans-serif !important;
+    }
+     ::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.generalHolder {
+    margin-top: 80px;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+}
+
+.loading {
+    position: fixed;
+    background: white;
+    top: 80px;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    z-index: 1;
 }
 
 .navBar {
-    background: pink;
+    top: 0;
+    background: #111;
     color: white;
     height: 80px;
-    position: relative;
+    position: fixed;
     width: 100%;
+    z-index: 1;
     text-align: center;
     .newPostButton {
-        position: absolute;
-        margin: auto;
-        border: 2px solid white;
+        margin: 15px auto;
+        border: none;
+        &:nth-child(1) {
+            border-left: 2px solid white;
+            border-bottom: 2px solid white;
+            border-top: 2px solid white;
+            border-right: 2px solid white;
+        }
+        &:nth-child(2) {
+            border-right: 2px solid white;
+            border-bottom: 2px solid white;
+            border-top: 2px solid white;
+        }
         color: white;
         top: 0%;
         bottom: 0%;
-        left: 0%;
-        right: 0%;
+        //left: 0%;
+        // right: 0%;
         width: 8rem;
         height: 3rem;
         background: transparent;
@@ -32,8 +68,6 @@ body {
         }
         &:hover {
             transition: 300ms;
-            width: 8.15rem;
-            height: 3.15rem;
             background: white;
             color: pink;
         }
@@ -47,12 +81,99 @@ body {
 .holder {
     overflow: auto;
     margin: auto;
+    height: 400px;
+    background: none;
+    outline: none;
+    border: none;
+    min-height: 400px;
+    position: relative;
+    display: block;
 }
 
 .insideThing {
-    width: 80%;
-    height: 80%;
+    top: 5%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    position: absolute;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+    * {
+        text-align: center;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .articleImage {
+        margin: auto;
+        background: gray;
+        background-size: cover;
+        height: 100%;
+        width: 95%;
+        background-position: top;
+        filter: sepia(5%);
+        background-repeat: no-repeat;
+        position: relative;
+        transition: 300ms;
+        &:hover {
+            transition: 300ms;
+            border: 2px solid pink;
+        }
+        span {
+            position: absolute;
+            right: $right;
+            display: inline-block;
+            padding: .05em 1em;
+            text-transform: uppercase;
+        }
+        .title {
+            * {
+                font-size: 29px;
+                color: #222;
+            }
+            @extend span;
+            bottom: 48px;
+            background: white;
+        }
+        .publishedBy {
+            * {
+                display: inline-block;
+                text-align: left;
+                font-size: 14px;
+                color: white;
+            }
+            z-index: 1;
+            @extend span;
+            bottom: 28px;
+            background: pink;
+        }
+        .datePublished {
+            background: #222;
+            text-align: right !important;
+            font-size: 12px !important;
+            color: white !important;
+            right: $right;
+            margin-top: 1em;
+            position: absolute;
+            bottom: 5px;
+        }
+    }
+}
+
+.readView {
+    @extend .insideThing;
+    top: initial;
+    bottom: initial;
+    overflow: initial;
+    position: absolute;
+    font-family: sans-serif;
+    line-height: 2em;
+    font-weight: 300;
+    padding: 2em 5em;
+    div {
+        text-align: justify;
+    }
+    .articleImage {
+        max-width: 600px;
+    }
 }
