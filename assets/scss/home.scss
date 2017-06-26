@@ -4,6 +4,22 @@ body {
     padding: 0;
     height: 100%;
     width: 100%;
+    * {
+        font-family: 'Raleway', sans-serif !important;
+    }
+     ::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.loading {
+    position: fixed;
+    background: white;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    z-index: 1;
 }
 
 .navBar {
@@ -47,12 +63,73 @@ body {
 .holder {
     overflow: auto;
     margin: auto;
+    min-height: 400px;
+    position: relative;
 }
 
 .insideThing {
-    width: 80%;
-    height: 80%;
+    top: 5%;
+    bottom: 15%;
+    left: 0%;
+    right: 0%;
+    position: absolute;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+    * {
+        text-align: center;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .articleImage {
+        margin: auto;
+        background: gray;
+        background-size: cover;
+        height: 100%;
+        width: 95%;
+        background-position: top;
+        filter: sepia(5%);
+        background-repeat: no-repeat;
+        position: relative;
+        transition: 300ms;
+        &:hover {
+            transition: 300ms;
+            border: 2px solid pink;
+        }
+        span {
+            position: absolute;
+            right: 20px;
+            display: inline-block;
+            padding: .05em 1em;
+            text-transform: uppercase;
+        }
+        .title {
+            * {
+                font-size: 29px;
+                color: #222;
+            }
+            @extend span;
+            bottom: 40px;
+            background: white;
+        }
+        .publishedBy {
+            * {
+                display: inline-block;
+                text-align: left;
+                font-size: 14px;
+                color: white;
+            }
+            @extend span;
+            bottom: 20px;
+            background: pink;
+        }
+    }
+    .datePublished {
+        text-align: right !important;
+        font-size: 12px !important;
+        color: #888 !important;
+        right: 20px;
+        margin-top: 1em;
+        position: absolute;
+    }
 }
