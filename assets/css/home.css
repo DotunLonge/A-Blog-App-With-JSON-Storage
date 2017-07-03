@@ -32,10 +32,13 @@ body {
   color: white;
   height: 80px;
   position: fixed;
+  overflow: auto;
   width: 100%;
   z-index: 1;
-  text-align: center; }
+  text-align: center;
+  transition: 700ms; }
   .navBar .newPostButton {
+    display: inline-block !important;
     margin: 15px auto;
     border: none;
     color: white;
@@ -45,12 +48,12 @@ body {
     height: 3rem;
     background: transparent;
     transition: 300ms; }
-    .navBar .newPostButton:nth-child(1) {
+    .navBar .newPostButton:nth-child(1), .navBar .newPostButton:nth-child(2) {
       border-left: 2px solid white;
       border-bottom: 2px solid white;
       border-top: 2px solid white;
       border-right: 2px solid white; }
-    .navBar .newPostButton:nth-child(2) {
+    .navBar .newPostButton:nth-child(3), .navBar .newPostButton:nth-child(4) {
       border-right: 2px solid white;
       border-bottom: 2px solid white;
       border-top: 2px solid white; }
@@ -102,36 +105,35 @@ body {
     .insideThing .articleImage:hover, .readView .articleImage:hover {
       transition: 300ms;
       border: 2px solid pink; }
-    .insideThing .articleImage span, .readView .articleImage span, .insideThing .articleImage .title, .readView .articleImage .title, .insideThing .articleImage .publishedBy, .readView .articleImage .publishedBy {
-      position: absolute;
-      right: 20px;
+  .insideThing span, .readView span, .insideThing .title, .readView .title, .insideThing .publishedBy, .readView .publishedBy {
+    position: absolute;
+    right: 20px;
+    display: inline-block;
+    padding: .05em 1em;
+    text-transform: uppercase; }
+  .insideThing .title, .readView .title {
+    bottom: 48px;
+    background: white; }
+    .insideThing .title *, .readView .title * {
+      font-size: 29px;
+      color: #222; }
+  .insideThing .publishedBy, .readView .publishedBy {
+    z-index: 1;
+    bottom: 28px;
+    background: pink; }
+    .insideThing .publishedBy *, .readView .publishedBy * {
       display: inline-block;
-      padding: .05em 1em;
-      text-transform: uppercase; }
-    .insideThing .articleImage .title, .readView .articleImage .title {
-      bottom: 48px;
-      background: white; }
-      .insideThing .articleImage .title *, .readView .articleImage .title * {
-        font-size: 29px;
-        color: #222; }
-    .insideThing .articleImage .publishedBy, .readView .articleImage .publishedBy {
-      z-index: 1;
-      bottom: 28px;
-      background: pink; }
-      .insideThing .articleImage .publishedBy *, .readView .articleImage .publishedBy * {
-        display: inline-block;
-        text-align: left;
-        font-size: 14px;
-        color: white; }
-    .insideThing .articleImage .datePublished, .readView .articleImage .datePublished {
-      background: #222;
-      text-align: right !important;
-      font-size: 12px !important;
-      color: white !important;
-      right: 20px;
-      margin-top: 1em;
-      position: absolute;
-      bottom: 5px; }
+      text-align: left;
+      font-size: 14px;
+      color: white; }
+  .insideThing .datePublished, .readView .datePublished {
+    background: #222;
+    text-align: right !important;
+    font-size: 12px !important;
+    color: white !important;
+    right: 20px;
+    margin-top: 1em;
+    position: absolute; }
 
 .readView {
   top: initial;
@@ -143,6 +145,48 @@ body {
   font-weight: 300;
   padding: 2em 5em; }
   .readView div {
+    margin-top: 2em;
     text-align: justify; }
   .readView .articleImage {
     max-width: 600px; }
+  .readView span, .readView .title, .readView .publishedBy {
+    display: block;
+    margin: auto; }
+  .readView .datePublished {
+    bottom: initial; }
+  .readView .title {
+    bottom: 75px; }
+  .readView .publishedBy {
+    bottom: 35px; }
+
+.inputField, .contentBox {
+  border: 1px solid #eee;
+  color: #eee;
+  display: inline-block;
+  width: 49%;
+  height: 50px;
+  margin: 1em auto;
+  text-align: center;
+  background: none; }
+  @media (max-width: 500px) {
+    .inputField, .contentBox {
+      width: 100%;
+      float: none; } }
+  .inputField:nth-child(1), .contentBox:nth-child(1) {
+    float: left; }
+  .inputField:nth-child(2), .contentBox:nth-child(2) {
+    float: right; }
+
+.contentBox {
+  margin: auto;
+  width: 90%;
+  position: absolute;
+  top: 27%;
+  left: 5%;
+  right: 5%;
+  bottom: 5%;
+  height: initial;
+  padding-top: 2em; }
+  @media (max-width: 500px) {
+    .contentBox {
+      top: 37%; } }
