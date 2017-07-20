@@ -1,3 +1,4 @@
+$right: 20px;
 html,
 body {
     margin: 0;
@@ -12,10 +13,17 @@ body {
     }
 }
 
+.generalHolder {
+    margin-top: 80px;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+}
+
 .loading {
     position: fixed;
     background: white;
-    top: 0%;
+    top: 80px;
     bottom: 0%;
     left: 0%;
     right: 0%;
@@ -23,21 +31,38 @@ body {
 }
 
 .navBar {
-    background: pink;
+    top: 0;
+    background: #111;
     color: white;
     height: 80px;
-    position: relative;
+    position: fixed;
+    overflow: auto;
     width: 100%;
+    z-index: 1;
     text-align: center;
+    transition: 700ms;
     .newPostButton {
-        position: absolute;
-        margin: auto;
-        border: 2px solid white;
+        display: inline-block !important;
+        margin: 15px auto;
+        border: none;
+        &:nth-child(1),
+        &:nth-child(2) {
+            border-left: 2px solid white;
+            border-bottom: 2px solid white;
+            border-top: 2px solid white;
+            border-right: 2px solid white;
+        }
+        &:nth-child(3),
+        &:nth-child(4) {
+            border-right: 2px solid white;
+            border-bottom: 2px solid white;
+            border-top: 2px solid white;
+        }
         color: white;
         top: 0%;
         bottom: 0%;
-        left: 0%;
-        right: 0%;
+        //left: 0%;
+        // right: 0%;
         width: 8rem;
         height: 3rem;
         background: transparent;
@@ -48,8 +73,6 @@ body {
         }
         &:hover {
             transition: 300ms;
-            width: 8.15rem;
-            height: 3.15rem;
             background: white;
             color: pink;
         }
@@ -63,13 +86,18 @@ body {
 .holder {
     overflow: auto;
     margin: auto;
+    height: 400px;
+    background: none;
+    outline: none;
+    border: none;
     min-height: 400px;
     position: relative;
+    display: block;
 }
 
 .insideThing {
     top: 5%;
-    bottom: 15%;
+    bottom: 0%;
     left: 0%;
     right: 0%;
     position: absolute;
@@ -96,40 +124,112 @@ body {
             transition: 300ms;
             border: 2px solid pink;
         }
-        span {
-            position: absolute;
-            right: 20px;
+    }
+    span {
+        position: absolute;
+        right: $right;
+        display: inline-block;
+        padding: .05em 1em;
+        text-transform: uppercase;
+    }
+    .title {
+        * {
+            font-size: 29px;
+            color: #222;
+        }
+        @extend span;
+        bottom: 48px;
+        background: white;
+    }
+    .publishedBy {
+        * {
             display: inline-block;
-            padding: .05em 1em;
-            text-transform: uppercase;
+            text-align: left;
+            font-size: 14px;
+            color: white;
         }
-        .title {
-            * {
-                font-size: 29px;
-                color: #222;
-            }
-            @extend span;
-            bottom: 40px;
-            background: white;
-        }
-        .publishedBy {
-            * {
-                display: inline-block;
-                text-align: left;
-                font-size: 14px;
-                color: white;
-            }
-            @extend span;
-            bottom: 20px;
-            background: pink;
-        }
+        z-index: 1;
+        @extend span;
+        bottom: 28px;
+        background: pink;
     }
     .datePublished {
+        background: #222;
         text-align: right !important;
         font-size: 12px !important;
-        color: #888 !important;
-        right: 20px;
+        color: white !important;
+        right: $right;
         margin-top: 1em;
         position: absolute;
+        // bottom: 5px;
     }
+}
+
+.readView {
+    @extend .insideThing;
+    top: initial;
+    bottom: initial;
+    overflow: initial;
+    position: absolute;
+    font-family: sans-serif;
+    line-height: 2em;
+    font-weight: 300;
+    padding: 2em 5em;
+    div {
+        margin-top: 2em;
+        text-align: justify;
+    }
+    .articleImage {
+        max-width: 600px;
+    }
+    span {
+        display: block;
+        margin: auto;
+    }
+    .datePublished {
+        bottom: initial;
+    }
+    .title {
+        bottom: 75px;
+    }
+    .publishedBy {
+        bottom: 35px;
+    }
+}
+
+.inputField {
+    @media(max-width: 500px) {
+        width: 100%;
+        float: none;
+    }
+    border: 1px solid #eee;
+    color: #eee;
+    display: inline-block;
+    width: 49%;
+    &:nth-child(1) {
+        float: left;
+    }
+    &:nth-child(2) {
+        float: right;
+    }
+    height: 50px;
+    margin: 1em auto;
+    text-align: center;
+    background: none;
+}
+
+.contentBox {
+    @extend .inputField;
+    margin: auto;
+    width: 90%;
+    position: absolute;
+    @media(max-width: 500px) {
+        top: 37%;
+    }
+    top: 27%;
+    left: 5%;
+    right: 5%;
+    bottom: 5%;
+    height: initial;
+    padding-top: 2em;
 }
